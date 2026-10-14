@@ -1,0 +1,58 @@
+/* PRECIFICA: estilos. Cores nas variáveis :root (modo claro e escuro). */
+:root{--bg:#eef1f6;--card:#fff;--tx:#10203a;--mu:#5d6b82;--ac:#10203a;--hi:#f2b705;--bd:#d8deea;--ok:#12803f;--bad:#c0262d;--wa:#a86100;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1424;--card:#13203a;--tx:#e8edf7;--mu:#8fa0bd;--ac:#f2b705;--hi:#f2b705;--bd:#233352;--ok:#4ade80;--bad:#ff7b7f;--wa:#fbbf24}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1100px;margin:auto;padding:16px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:end;justify-content:space-between;padding-bottom:12px}
+.logo{font:700 30px Georgia,"Iowan Old Style",serif;letter-spacing:-.5px}
+.logo small{display:block;font:13px system-ui,sans-serif;color:var(--mu);letter-spacing:0}
+nav{display:flex;gap:4px;overflow-x:auto;max-width:100%;padding-bottom:4px}
+nav button{border:0;background:none;color:var(--mu);padding:8px 12px;border-radius:8px;font:inherit;cursor:pointer;white-space:nowrap}
+nav button.on{background:var(--ac);color:var(--bg);font-weight:600}
+:focus-visible{outline:2px solid var(--hi);outline-offset:2px}
+h1{font:700 clamp(28px,5vw,46px)/1.1 Georgia,serif;margin:12px 0 8px;max-width:20ch}
+h3{margin:0 0 12px;font-size:17px}
+.mu{color:var(--mu)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:14px}
+.fm{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fm .w{grid-column:1/-1}
+label{display:block;font-size:13px;color:var(--mu)}
+input,select{width:100%;margin-top:3px;padding:8px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
+input[type=range]{padding:0;accent-color:var(--hi)}
+button{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 14px;border-radius:8px}
+button.pri{background:var(--hi);border-color:var(--hi);color:#10203a;font-weight:700}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.kpi{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px}
+.kpi span{font-size:12px;color:var(--mu);display:block}
+.kpi b{font:700 22px Georgia,serif}
+.big{font:700 48px/1 Georgia,serif}
+.pos{color:var(--ok)}.neg{color:var(--bad)}.war{color:var(--wa)}
+.tb{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px 6px;border-bottom:1px solid var(--bd);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--mu);font-weight:600}
+.bd{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;border:1px solid currentColor}
+.bar{height:8px;border-radius:4px;background:var(--hi);min-width:2px}
+.bar.l{background:var(--ok)}
+.bl{display:grid;grid-template-columns:150px 1fr 90px;gap:8px;align-items:center;font-size:13px;margin:4px 0}
+.ins{padding:10px 12px;border-left:4px solid var(--mu);background:var(--card);border-radius:8px;margin-bottom:8px}
+.ins.bad{border-color:var(--bad)}.ins.warn{border-color:var(--wa)}.ins.ok{border-color:var(--ok)}.ins.info{border-color:var(--hi)}
+#toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--ac);color:var(--bg);padding:8px 16px;border-radius:8px;display:none}
+footer{color:var(--mu);font-size:12px;padding:16px 0}
+
+/* ===== Compatibilidade iOS/Android/desktop ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+input,select{font-size:16px}
+input:not([type=range]){-webkit-appearance:none;appearance:none}
+button{touch-action:manipulation;-webkit-appearance:none;appearance:none}
+nav{-webkit-overflow-scrolling:touch}
+#toast{bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+@media(max-width:600px){.fm{grid-template-columns:1fr}.big{font-size:38px}.bl{grid-template-columns:110px 1fr 80px}}
