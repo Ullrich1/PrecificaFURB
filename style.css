@@ -56,3 +56,19 @@ button{touch-action:manipulation;-webkit-appearance:none;appearance:none}
 nav{-webkit-overflow-scrolling:touch}
 #toast{bottom:calc(16px + env(safe-area-inset-bottom,0px))}
 @media(max-width:600px){.fm{grid-template-columns:1fr}.big{font-size:38px}.bl{grid-template-columns:110px 1fr 80px}}
+
+/* ===== v2: simulador, quantidades, navegação ===== */
+:root{--tl:#e3e9f6}
+@media(prefers-color-scheme:dark){:root{--tl:#1a2b4c}}
+nav{flex-wrap:wrap;overflow:visible;align-items:center;gap:8px}
+.tools{display:flex;flex-wrap:wrap;gap:2px;align-items:center;padding:3px 6px;border-radius:12px;background:var(--tl);border:1px dashed var(--bd)}
+.tools small{color:var(--mu);font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:0 6px}
+.tools button.on{background:var(--hi);color:#10203a}
+.sw{margin-bottom:6px}
+.sr{display:grid;grid-template-columns:1fr 96px;gap:10px;align-items:center}
+.pc{position:relative}.pc input{padding-right:24px;text-align:right}
+.pc i{position:absolute;right:9px;top:50%;transform:translateY(-50%);font-style:normal;color:var(--mu);margin-top:1px}
+.qty{display:inline-flex;align-items:center;gap:4px}
+.qty input{width:72px;margin:0;text-align:center}
+.qty button{padding:6px 12px;line-height:1.2;font-weight:700}
+.bd.neg{color:var(--bad)}
