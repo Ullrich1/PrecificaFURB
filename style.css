@@ -25,7 +25,6 @@ nav button{border:0;background:transparent;color:var(--mu);padding:8px 14px;bord
 nav button:hover{background:rgba(120,100,70,.1);color:var(--tx)}
 nav button.on{background:var(--ac);color:var(--bg);font-weight:600;box-shadow:0 2px 8px -2px rgba(40,30,15,.35)}
 .tools{display:flex;flex-wrap:wrap;gap:2px;align-items:center;padding:3px 5px;border-radius:999px;background:var(--tl);border:1px solid var(--bd)}
-.tools small{color:var(--mu);font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;padding:0 8px}
 .tools button.on{background:var(--hi);color:#2b2825;box-shadow:0 2px 8px -2px rgba(160,125,60,.45)}
 :focus-visible{outline:2px solid var(--hi);outline-offset:2px}
 
